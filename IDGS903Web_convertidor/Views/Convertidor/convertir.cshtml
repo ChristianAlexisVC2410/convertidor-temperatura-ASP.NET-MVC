@@ -1,0 +1,61 @@
+﻿@model IDGS903Web_convertidor.Models.Convertidor
+@{
+    ViewBag.Title = "convertir";
+}
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+
+            <h2>Convertidor</h2>
+        </div>
+
+        <div class="col-sm-4">
+           
+            <form action="Convertir" method="post">
+                <div class="form-group">
+
+                    <label for="Numero" class="col-4 col-form-label">Ingrese el numero:</label>
+                    <div class="col-8">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-address-card"></i>
+                                </div>
+                            </div>
+                            <input step="0.000000000001" id="Numero" name="Numero" type="number" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="">
+                        <input type="radio" name="r1" value="c" checked /><label>Celcius</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="r1" value="f" /><label>fahrenheit</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-4 col-8">
+                        <button name="submit" id="btnConvertir" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+
+
+
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <div class="col-">
+                <h1>Resultado</h1>
+                <h2>@Model.Resultado</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+
+
